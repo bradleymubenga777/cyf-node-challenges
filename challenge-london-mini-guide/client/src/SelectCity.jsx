@@ -14,15 +14,23 @@ export default function SelectCity() {
         let cityValue = e.target.value;
 
         if (cityValue === "Harrow") {
-            setCityData(HarrowData);
+            setCityData(cityData = HarrowData);
+            console.log(cityData);
         }
 
         else if (cityValue === "Heathrow") {
-            setCityData(HeathrowData);
+            setCityData(cityData = HeathrowData);
+            console.log(cityData);
         }
 
         else if (cityValue === "StratfordData") {
-            setCityData(StratfordData);
+            setCityData(cityData = StratfordData);
+            console.log(cityData);
+        }
+
+        else if (cityValue === "") {
+            setCityData([""])
+            console.log(cityData);
         }
 
 
@@ -33,7 +41,7 @@ export default function SelectCity() {
     return (
         <section>
             <select onChange={changeCity}>
-                <option value="Choose city">Choose a city</option>
+                <option value="">Choose a city</option>
                 <option value="Harrow">Harrow</option>
                 <option value="HeathrowData">Heathrow</option>
                 <option value="StratfordData">Stratford</option>
