@@ -1,6 +1,6 @@
 import './App.css';
 
-import Table from './Table';
+
 import SelectCity from './SelectCity';
 
 function App() {
@@ -19,8 +19,6 @@ function App() {
         </div>
 
         <br />
-
-        <Table />
       </main>
     </div>
   );

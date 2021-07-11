@@ -3,7 +3,6 @@ import React from 'react'
 import HarrowData from './data/Harrow.json';
 
 export default function Table({city, category}) {
-    console.log(city)
     return (
         <table>
             <tr>
@@ -13,7 +12,7 @@ export default function Table({city, category}) {
                 <th>Address</th>
             </tr>
             
-            {city["pharmacies"].map((data, key) => {
+            {city.length > 0 ? (city["pharmacies"].map((data, key) => {
                 return (
                     <tr key={key}>
                         <td>{data.name}</td>
@@ -22,7 +21,7 @@ export default function Table({city, category}) {
                         <td>{data.address}</td>
                     </tr>
                 )
-            })}
+            })) : (<h1>Hello</h1>)}
 
         </table> 
     )
